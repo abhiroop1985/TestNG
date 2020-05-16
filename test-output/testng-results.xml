@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2312" started-at="2020-05-15T20:25:14 EDT" finished-at="2020-05-15T20:25:17 EDT">
+    <groups>
+      <group name="Post Method">
+        <method signature="postmethod.test_post()[pri:1, instance:api.dgdgd.postmethod@711f39f9]" name="test_post" class="api.dgdgd.postmethod"/>
+        <method signature="postmethod.verifyPost()[pri:2, instance:api.dgdgd.postmethod@711f39f9]" name="verifyPost" class="api.dgdgd.postmethod"/>
+      </group> <!-- Post Method -->
+    </groups>
+    <test name="Default test" duration-ms="2312" started-at="2020-05-15T20:25:14 EDT" finished-at="2020-05-15T20:25:17 EDT">
+      <class name="api.dgdgd.postmethod">
+        <test-method status="PASS" signature="test_post()[pri:1, instance:api.dgdgd.postmethod@711f39f9]" name="test_post" duration-ms="2233" started-at="2020-05-15T20:25:14 EDT" finished-at="2020-05-15T20:25:17 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_post -->
+        <test-method status="PASS" signature="verifyPost()[pri:2, instance:api.dgdgd.postmethod@711f39f9]" name="verifyPost" duration-ms="36" started-at="2020-05-15T20:25:17 EDT" finished-at="2020-05-15T20:25:17 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPost -->
+      </class> <!-- api.dgdgd.postmethod -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
