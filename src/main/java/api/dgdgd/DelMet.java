@@ -7,22 +7,30 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 
+
+
+
 public class DelMet {
+	
+	static int id = 2;											//Set a integer variable 
+	
 @Test (priority = 1,groups = {"DeleteMethod"})
+
+
 	public static void delMethod() {
 		// TODO Auto-generated method stub
-	RestAssured.baseURI = "http://localhost:3000/posts/1";
+	RestAssured.baseURI = "http://localhost:3000/posts/";
 	
 
 			given().log().all()
 			
-			.when().delete(baseURI)
+			.when().delete(baseURI+id)							// sending URI
 			
 			.then()
 			
 			.log().all()
-			.assertThat().statusCode(200);
-			//.extract().response().asString();
+			.assertThat().statusCode(200);						//Verify the Status Code
+			
 	
 	}
 
@@ -31,25 +39,23 @@ public class DelMet {
 public static void getmet() {
 	
 	System.out.println("Entering Get Method");
-	RestAssured.baseURI = "http://localhost:3000/posts/7";
 	
-	
-	
+		
 			given().log().all()	
 			
-			.when().get(baseURI)
+			.when().get(baseURI+id)								//Verify if the ID has been deleted
 			
 		.then()
 		
 		.log().all()
-		.assertThat().statusCode(404);
+		.assertThat().statusCode(404);							//Verify the status code
 		
 
 }
 
-@Test(priority = 3, groups = {"DeleteMethod"})
+//@Test(priority = 3, groups = {"DeleteMethod"})
 
-public static void getnegative() {
+/*public static void getnegative() {
 	
 	System.out.println("Entering Get Method");
 	//RestAssured.baseURI = "http://localhost:3000/posts/7";
@@ -66,5 +72,5 @@ public static void getnegative() {
 			.assertThat().statusCode(404);
 		
 
-}
+}*/
 }

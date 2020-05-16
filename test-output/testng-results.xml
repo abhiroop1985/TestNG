@@ -2,24 +2,26 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2312" started-at="2020-05-15T20:25:14 EDT" finished-at="2020-05-15T20:25:17 EDT">
+  <suite name="Default suite" duration-ms="2637" started-at="2020-05-16T13:41:17 EDT" finished-at="2020-05-16T13:41:20 EDT">
     <groups>
-      <group name="Post Method">
-        <method signature="postmethod.test_post()[pri:1, instance:api.dgdgd.postmethod@711f39f9]" name="test_post" class="api.dgdgd.postmethod"/>
-        <method signature="postmethod.verifyPost()[pri:2, instance:api.dgdgd.postmethod@711f39f9]" name="verifyPost" class="api.dgdgd.postmethod"/>
-      </group> <!-- Post Method -->
+      <group name="putMethod">
+        <method signature="Putmethod.putMet()[pri:1, instance:api.dgdgd.Putmethod@711f39f9]" name="putMet" class="api.dgdgd.Putmethod"/>
+      </group> <!-- putMethod -->
+      <group name="GetMethod">
+        <method signature="Putmethod.getmet()[pri:2, instance:api.dgdgd.Putmethod@711f39f9]" name="getmet" class="api.dgdgd.Putmethod"/>
+      </group> <!-- GetMethod -->
     </groups>
-    <test name="Default test" duration-ms="2312" started-at="2020-05-15T20:25:14 EDT" finished-at="2020-05-15T20:25:17 EDT">
-      <class name="api.dgdgd.postmethod">
-        <test-method status="PASS" signature="test_post()[pri:1, instance:api.dgdgd.postmethod@711f39f9]" name="test_post" duration-ms="2233" started-at="2020-05-15T20:25:14 EDT" finished-at="2020-05-15T20:25:17 EDT">
+    <test name="Default test" duration-ms="2637" started-at="2020-05-16T13:41:17 EDT" finished-at="2020-05-16T13:41:20 EDT">
+      <class name="api.dgdgd.Putmethod">
+        <test-method status="PASS" signature="putMet()[pri:1, instance:api.dgdgd.Putmethod@711f39f9]" name="putMet" duration-ms="1944" started-at="2020-05-16T13:41:17 EDT" finished-at="2020-05-16T13:41:19 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_post -->
-        <test-method status="PASS" signature="verifyPost()[pri:2, instance:api.dgdgd.postmethod@711f39f9]" name="verifyPost" duration-ms="36" started-at="2020-05-15T20:25:17 EDT" finished-at="2020-05-15T20:25:17 EDT">
+        </test-method> <!-- putMet -->
+        <test-method status="PASS" signature="getmet()[pri:2, instance:api.dgdgd.Putmethod@711f39f9]" name="getmet" duration-ms="649" started-at="2020-05-16T13:41:19 EDT" finished-at="2020-05-16T13:41:20 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPost -->
-      </class> <!-- api.dgdgd.postmethod -->
+        </test-method> <!-- getmet -->
+      </class> <!-- api.dgdgd.Putmethod -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

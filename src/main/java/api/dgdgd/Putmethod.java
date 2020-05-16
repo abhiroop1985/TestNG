@@ -14,30 +14,32 @@ import io.restassured.http.ContentType;
 
 public class Putmethod {
 	
+	static int id = 4;												//Setting up a variable for id
+	static String title2 = "Updated Title";							//Setting up a variable for title
+	static String author2= "Updated Author";  						//Setting up a variable for author
+	
 	@Test(priority=1,groups = {"putMethod"})
 
 	public static void putMet() {
 		// TODO Auto-generated method stub
 		
-RestAssured.baseURI= "http://localhost:3000/posts/2";
+RestAssured.baseURI= "http://localhost:3000/posts/";
 		
 						
 			given().contentType(ContentType.JSON)
 			
-			.body(App.bodyJSON(3, "New Title", "New Author"))
+			.body(App.bodyJSON(id, title2, author2))
 			
 		
 			.when().log().all()
 			
-			.put(baseURI)
+			.put(baseURI+id)
 			
 			.then()
-			.log().all()
-			.assertThat().statusCode(200)
-			.extract().response().toString();
-		
-		
-		
+			.log().all()										//Log a;; output in console 
+			.assertThat().statusCode(200);						//Verify the status code is 200
+			//.extract().response().toString();
+				
 	}
 	
 	@Test(priority=2,groups = {"GetMethod"})
@@ -45,13 +47,11 @@ RestAssured.baseURI= "http://localhost:3000/posts/2";
 	public static void getmet() {
 		
 		System.out.println("Entering Get Method");
-		
-		//RestAssured.baseURI = "http://localhost:3000/posts/2";
-		
+				
 		
 		String recordStr= 
 				given().			
-				when().get(baseURI)
+				when().get(baseURI+id)
 				
 				.then()
 				
@@ -69,8 +69,8 @@ RestAssured.baseURI= "http://localhost:3000/posts/2";
 	//System.out.println(newTitle);
 	//System.out.println(newAuthor);
 	
-	Assert.assertEquals("New Author", newAuthor);
-	Assert.assertEquals("New Title", newTitle);
+	Assert.assertEquals(author2, newAuthor);
+	Assert.assertEquals(title2, newTitle);
 	
 	}
 	

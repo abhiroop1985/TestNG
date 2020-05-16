@@ -1,15 +1,14 @@
 package api.dgdgd;
 
-/**
- * Hello world!
- *
- */
+import io.restassured.RestAssured;
+
+
+
 public class App 
 {
-    public static String main()
+    public static String uri()
     {
-        System.out.println( "Hello World!" );
-		return null;
+    	return RestAssured.baseURI= "http://localhost:3000/posts/";
     }
 
 public static String bodyJSON(int inid, String ttle, String auth)

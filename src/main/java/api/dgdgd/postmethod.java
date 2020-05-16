@@ -31,25 +31,25 @@ public class postmethod {
 		
 		String responseBody =
 				
-			given().contentType(ContentType.JSON)
+			given().contentType(ContentType.JSON)						//Set the content type ( which was not required)
 			
-			.body(App.bodyJSON(Id,author,title))
-			.log().all()
+			.body(App.bodyJSON(Id,author,title))						//Posting parameters
+			.log().all()												// log the input
 		
 			.when()
-			.post(baseURI)
+			.post(App.uri())
 			
 			.then()
-			.log().all()
-			.assertThat().statusCode(201)
+			.log().all()												//log the output
+			.assertThat().statusCode(201)								// Verify if the status code 201
 			//.body("id", equalTo(18))
 			//.header("Location", "http://localhost:3000/posts//18")
-			.extract().response().asString();
+			.extract().response().asString();							//saving and storing the output as string
 		
 		
-	JsonPath aName = new JsonPath(responseBody);
-	String authorName = aName.getString("author");
-	System.out.println(authorName);
+	JsonPath aName = new JsonPath(responseBody);						//Converting the string into JSON
+	String authorName = aName.getString("author");						// Extracting the Author
+	System.out.println(authorName);										// Printing the Author
 		
 		
 	}
@@ -69,18 +69,5 @@ public class postmethod {
 		.assertThat().statusCode(200);
 	}
 
-	//@DataProvider(name="BooksData")
-
-//	public Object[][][]  getData()
-
-	{
-
-	//array=collection of elements
-
-	//multidimensional array= collection of arrays
-
-	//return (Object[][][]) new Object[][] {‌{"21","Title21","Author 21"},{"22","Title 22","Author 22"}, {"23","Title 23","Author 23"} };
 
 	}
-}
-

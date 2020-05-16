@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.dgdgd.postmethod">
+      <class name="api.dgdgd.Putmethod">
         <methods>
-          <include name="test_post"/>
-          <include name="verifyPost"/>
+          <include name="getmet"/>
         </methods>
-      </class> <!-- api.dgdgd.postmethod -->
+      </class> <!-- api.dgdgd.Putmethod -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
